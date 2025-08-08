@@ -54,33 +54,6 @@ body {
     color: var(--accent-color) !important;
 }
 
-/* 指揮介紹區塊 */
-.conductor-profile {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.conductor-image {
-    flex-shrink: 0;
-    width: 280px;
-}
-
-.conductor-image img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.conductor-info {
-    flex: 1;
-}
-
-@media (max-width: 768px) {
-    .conductor-image {
-        width: 220px;
-    }
-}
-
 /* 首頁橫幅 */
 .hero-section {
     height: 100vh;
@@ -121,25 +94,61 @@ body {
     transform: translateY(-5px);
 }
 
-.program-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
+.program-item {
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.program-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.program-header {
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
     position: relative;
 }
 
-.program-item h3::after {
+.program-header::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
-    width: 50px;
+    width: 0;
     height: 2px;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    transition: width 0.3s ease;
+}
+
+.program-header:hover::after {
+    width: 100%;
+}
+
+.program-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
 }
 
 .composer {
     color: var(--secondary-color);
     font-style: italic;
+    font-size: 0.95rem;
+}
+
+.program-header:hover h3 {
+    color: var(--secondary-color);
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-dark);
 }
 
 /* 演出成員列表 */
