@@ -15,6 +15,78 @@ body {
     color: var(--text-dark);
 }
 
+/* 演出成員樣式 */
+.instrument-group {
+    padding: 1.5rem 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.instrument-group:last-child {
+    border-bottom: none;
+}
+
+.instrument-group h5 {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.instrument-group h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, rgba(0, 188, 212, 0.1) 100%);
+}
+
+.conductor-bio p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.program-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.instrument-group p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.members-legend {
+    padding: 1.5rem 0 0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.members-legend p {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.members-legend p:last-child {
+    margin-bottom: 0;
+}
+
+.instrument-group h5 i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.member-special {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.25rem;
+}
+
+.member-special i {
+    font-size: 0.8em;
+    margin-right: 0.1rem;
+}
+
 /* 導覽列樣式 */
 .navbar {
     background: linear-gradient(90deg, rgba(0, 188, 212, 0.95), rgba(0, 150, 136, 0.95));
@@ -149,6 +221,79 @@ body {
     font-size: 0.95rem;
     line-height: 1.8;
     color: var(--text-dark);
+}
+
+/* 特別感謝區塊樣式 */
+.thanks-item {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.thanks-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.thanks-item h4 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.thanks-item ul li {
+    color: var(--text-dark);
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+.thanks-item ul li:last-child {
+    border-bottom: none;
+}
+
+/* 演出成員區塊樣式 */
+.member-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.member-group {
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+.member-group:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.member-group h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-group p {
+    margin-bottom: 0.25rem;
+    line-height: 1.6;
+}
+
+.member-card h4 {
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.member-card h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
 }
 
 /* 演出成員列表 */
