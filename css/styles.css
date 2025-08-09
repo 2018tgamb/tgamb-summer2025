@@ -78,12 +78,12 @@ body {
 .members-legend {
     padding: 1.5rem 0 0;
     margin-top: 2rem;
-    text-align: center;
 }
 
 .members-legend p {
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
+    text-align: left;
 }
 
 .members-legend p:last-child {
