@@ -42,18 +42,37 @@ body {
 }
 
 .conductor-bio p {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     line-height: 1.8;
 }
 
 .program-description {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     line-height: 1.8;
 }
 
 .instrument-group p {
     font-size: 1.1rem;
     line-height: 1.6;
+}
+
+/* 特別感謝區塊的字體大小 */
+.thanks-item ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* 指揮照片在行動裝置上的樣式 */
+@media (max-width: 768px) {
+    #conductor img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        object-position: top center;  /* 確保照片從上方開始顯示 */
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
+    }
 }
 
 .members-legend {
@@ -79,12 +98,29 @@ body {
 .member-special {
     display: inline-flex;
     align-items: center;
-    margin-right: 0.25rem;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+    margin-left: 0.25rem;
 }
 
 .member-special i {
     font-size: 0.8em;
-    margin-right: 0.1rem;
+    margin-right: 0.25rem;
+}
+
+/* 防止名字被換行截斷 */
+.instrument-group p {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* 讓一般名字有適當間距 */
+.instrument-group p > span:not(.member-special) {
+    margin-right: 0.5rem;
 }
 
 /* 導覽列樣式 */
@@ -210,7 +246,7 @@ body {
 .composer {
     color: var(--secondary-color);
     font-style: italic;
-    font-size: 0.95rem;
+    font-size: 1.1rem;  /* 調整與樂器組標題一樣大 */
 }
 
 .program-header:hover h3 {
@@ -218,8 +254,8 @@ body {
 }
 
 .description {
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: 1.1rem;  /* 調整與演出人員名單一樣大 */
+    line-height: 1.6;   /* 調整與演出人員名單一致 */
     color: var(--text-dark);
 }
 
