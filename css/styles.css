@@ -98,15 +98,17 @@ body {
 .member-special {
     display: inline-flex;
     align-items: center;
-    margin-right: 0.5rem;
+    margin-right: 0;
     white-space: nowrap;
-    margin-left: 0.25rem;
+    min-width: 4em;  /* 確保特殊成員最小寬度一致 */
 }
 
 .member-special i {
     font-size: 0.8em;
-    margin-right: 0.25rem;
-    /* margin-left: 0.15rem; */
+    width: 1em;  /* 增加圖標寬度 */
+    margin-right: 0.3rem;  /* 微調圖標右邊距 */
+    text-align: center;
+    flex-shrink: 0;  /* 防止圖標被壓縮 */
 }
 
 /* 防止名字被換行截斷 */
@@ -115,13 +117,15 @@ body {
     overflow-wrap: anywhere;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem 1rem;
     align-items: center;
 }
 
 /* 讓一般名字有適當間距 */
 .instrument-group p > span:not(.member-special) {
-    margin-right: 0.5rem;
+    margin-right: 0;
+    padding-left: 1.1em;  /* 增加左邊距以對齊特殊成員的文字 */
+    min-width: 4em;  /* 與特殊成員保持一致的最小寬度 */
 }
 
 /* 導覽列樣式 */
