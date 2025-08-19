@@ -106,6 +106,7 @@ body {
 .member-special i {
     font-size: 0.8em;
     margin-right: 0.25rem;
+    /* margin-left: 0.15rem; */
 }
 
 /* 防止名字被換行截斷 */
