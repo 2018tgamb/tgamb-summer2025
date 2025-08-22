@@ -38,6 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
         element.classList.add('fade-in');
         observer.observe(element);
     });
+
+    // 處理曲目展開/收合狀態
+    document.querySelectorAll('.program-header').forEach(header => {
+        header.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+    });
 });
 
 // 回到頂部按鈕
